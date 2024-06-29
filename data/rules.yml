@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Respond to thank you
+  steps:
+  - intent: thank_you
+  - action: utter_pleasure
+
+- rule: Respond to who are you
+  steps:
+  - intent: who_are_you
+  - action: utter_who_are_you
+
+- rule: Respond to about person
+  steps:
+  - intent: about_person
+  - action: utter_about_person
+
+- rule: Respond to about person age 
+  steps:
+  - intent: about_person_age
+  - action: utter_about_person_age
+
+- rule: Respond to skills expertise
+  steps:
+  - intent: skills_expertise
+  - action: utter_skills_expertise
+
+- rule: Fallback rule
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback

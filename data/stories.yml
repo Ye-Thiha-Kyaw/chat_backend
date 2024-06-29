@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: respond to thank you
+  steps:
+  - intent: thank_you
+  - action: utter_pleasure
+
+- story: respond to who are you
+  steps:
+  - intent: who_are_you
+  - action: utter_who_are_you
+
+- story: respond to about person
+  steps:
+  - intent: about_person
+  - action: utter_about_person
+
+- story: respond to about person age
+  steps:
+  - intent: about_person_age
+  - action: utter_about_person_age
+
+- story: respond to skills expertise
+  steps:
+  - intent: skills_expertise
+  - action: utter_skills_expertise
+
+

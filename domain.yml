@@ -1,0 +1,69 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - thank_you
+  - who_are_you
+  - about_person
+  - about_person_age
+  - skills_expertise
+  - nlu_fallback  # This is the intent for fallback
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+  utter_ask_location:
+    - text: "Where do you live?"
+
+  utter_thanks:
+    - text: "Thank you!"
+
+  utter_pleasure:
+    - text: "It is my pleasure."
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_who_are_you:
+    - text: "I am Mr. Ye Thiha Kyaw's personal assistance chat bot."
+
+  utter_about_person:
+    - text: >
+        Ye Thiha Kyaw is an Engineer. He comes from a background as a telecommunications engineer with over 8 years of experience in network operation and maintenance. 
+        Recently, he has transitioned into software development, specializing in JavaScript and Python. 
+        He has a keen interest in AI and data science, and is currently focused on expanding his Python skills. 
+        He is enthusiastic about applying his technical expertise and problem-solving abilities to create innovative solutions.
+
+  utter_about_person_age:
+    - text: "He is 31 Years old now"
+
+  utter_skills_expertise:
+    - text: "He can handle HTML, CSS, JavaScript, and Python. He has some knowledge in frameworks like React.js and Flask as well."
+
+  
+actions:
+  - action_default_fallback
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
